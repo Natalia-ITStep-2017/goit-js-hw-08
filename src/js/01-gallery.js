@@ -23,7 +23,7 @@ const galleryItemsHtml = galleryItems.map(({ preview, original, description }) =
 
 galleryEl.innerHTML = galleryItemsHtml;
 
-let gallery = new SimpleLightbox('.gallery a',
+new SimpleLightbox('.gallery a',
   {
     captions: true,
     captionsData: 'alt',
@@ -31,8 +31,6 @@ let gallery = new SimpleLightbox('.gallery a',
     captionDelay: 250,
     showCounter: false
   });
-gallery.on('show.simplelightbox', function () {
-	// do something…
-});
+
 
 
